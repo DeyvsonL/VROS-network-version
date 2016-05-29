@@ -52,9 +52,6 @@ public class CharacterMovementController : MonoBehaviour {
     }
 
     private void MoveCharacter() {
-        Debug.Log(speed);
-        Debug.Log(horizontalInput);
-        Debug.Log(verticalInput);
 
         Vector3 targetPosition = new Vector3(horizontalInput*speed, 0,verticalInput*speed);
         navMeshAgent.Move(targetPosition * Time.deltaTime);
