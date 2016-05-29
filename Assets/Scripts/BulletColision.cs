@@ -15,11 +15,12 @@ public class BulletColision : MonoBehaviour {
 
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        GameObject player = collision.gameObject.GetComponent<OriginPlayer>().player;
+       
         bool isBullet = collision.gameObject.tag == TAG_BULLET;
         
         if (isBullet)
         {
+            GameObject player = collision.gameObject.GetComponent<OriginPlayer>().player;
             Pontuation points = player.GetComponent<Pontuation>();
             points.changePontuation(Pontuation.DEFAULT_PONTUATION_INCREASE);
             Destroy(this.gameObject);
