@@ -31,7 +31,7 @@ public class CharacterWeaponController : NetworkBehaviour {
     [Command]
     private void CmdShoot() {
         Bullet bulletClone = Instantiate(bulletPrefab);
-        bulletClone.transform.position = transform.position+(transform.forward*1.0f);
+        bulletClone.transform.position = transform.position + (transform.forward * 1.0f);
         bulletClone.transform.rotation = transform.rotation;
         bulletClone.GetComponent<OriginPlayer>().player = gameObject;
 
